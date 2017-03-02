@@ -1,0 +1,18 @@
+<h1>Profile Edit</h1>
+
+<div>
+  <%= form_for(@user) do |f| %>
+      name:<%= @user.name %>
+      <br>
+      profile:<%= @user.profile %>
+      <%= f.text_area :profile, class: 'form-control' %>
+      <br>
+      mail:<%= @user.email %>
+      <% #公開するかどうか %>  
+      <br>
+      region:<%= @user.region %>
+      <%= f.text_field :region, class: 'form-control' %>
+      <br>
+      <%= f.submit "edit", class: "btn btn-sm btn-primary" %>
+  <% end %>
+</div>
